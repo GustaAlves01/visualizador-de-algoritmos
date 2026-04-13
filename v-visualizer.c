@@ -4,7 +4,7 @@ void vArr(int a[]);
 int maxColHeigh(int a[]);
 
 int main(){
-	int arr1[] = {0, 5, 4, 1, 4};
+		int arr1[] = {0, 1, 2, 3, 4};
 	
 	vArr(arr1);
 
