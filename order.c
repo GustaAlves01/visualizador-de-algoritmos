@@ -1,29 +1,49 @@
 #include <stdio.h>
+#define ARRLEN 5
 
-int viewArr(int a[]);
+void order(int a[]);
+
 
 int main(){
-	int arr[4] = {3, 2, 3, 4};
-	int arrOrdered;
-	if (arrOrdered = viewArr(arr))
-		printf("O array esta ordenado\n");
+	int arr[ARRLEN] = {4,1,6,3,2};
 	
-	else
-		printf("O array nao esta ordenado\n");
+	order(arr);
+		
+
+	printf("Array ordenado: \n");
+	for (int i = 0; i < ARRLEN; i++){
+		printf("%d, ", arr[i]);
+	
+	}
+	printf("\n");
+	
+
 
 	return 0;
 
 }
 
-int viewArr(int a[]){
-	int min = 0;
-	for (int i = 0; i < 4; i++){
-		if (a[i] >= min)
-			min = a[i];
-		else return 0;
+void order(int a[]){
+	int min, minPos;
+
+	for (int i = 0; i < ARRLEN; i++){
+		min = a[i];
+		minPos = i;
+		for (int j = i; j < ARRLEN; j++){
+			if (a[j] < min){
+				min = a[j];
+				minPos = j;	
 			}
+		}
 
-return 1;
+		for (int k = minPos; k > i; k--){
+			a[k] = a[k-1];
+		}
+		a[i] = min;
+	}
 	
-
 }
+
+
+
+
