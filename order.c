@@ -13,7 +13,6 @@ int main(){
 	printf("Array ordenado: \n");
 	for (int i = 0; i < ARRLEN; i++){
 		printf("%d, ", arr[i]);
-	
 	}
 	printf("\n");
 	
@@ -35,7 +34,6 @@ void order(int a[]){
 				minPos = j;	
 			}
 		}
-
 		a[minPos] = a[i];
 		a[i] = min;
 	}
