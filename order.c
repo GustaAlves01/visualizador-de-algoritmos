@@ -36,9 +36,7 @@ void order(int a[]){
 			}
 		}
 
-		for (int k = minPos; k > i; k--){
-			a[k] = a[k-1];
-		}
+		a[minPos] = a[i];
 		a[i] = min;
 	}
 	
